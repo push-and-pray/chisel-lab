@@ -1,0 +1,10 @@
+.direnv/
+.bloop/
+target/
+.metals/
+project/
+vivado/
+*.v
+*.fir
+.scalafmt.conf
+*.anno.json
