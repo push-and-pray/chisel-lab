@@ -15,11 +15,17 @@ class Mux2 extends Module {
 
   // ***** your code starts here *****
 
-  res := b
+  /*
+  when(sel) {
+    res := b
+  } .otherwise {
+    res := a
+  }
+   */
+
+  res := Mux(sel, b, a)
 
   // ***** your code ends here *****
 
   io.y := res
 }
-
-

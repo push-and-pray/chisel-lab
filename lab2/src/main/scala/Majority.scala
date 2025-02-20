@@ -20,7 +20,7 @@ class Majority extends Module {
   // Rewrite this expression to express the majority to pass all tests.
 
   // ***** your code starts here *****
-  val res = a
+  val res = (a & b) | (a & c) | (b & c)
   // ***** your code ends here *****
 
   // Hint: this initial exercise shall familiarize you with the testing environment.

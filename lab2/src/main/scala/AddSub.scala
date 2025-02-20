@@ -14,12 +14,11 @@ class AddSub extends Module {
   val res = WireDefault(0.U(4.W))
 
   // ***** your code starts here *****
-
-  // res := ????
+  val add_result = a + b
+  val sub_result = a - b
+  res := Mux(selAdd, add_result, sub_result)
 
   // ***** your code ends here *****
 
   io.y := res
 }
-
-
