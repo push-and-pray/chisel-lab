@@ -14,9 +14,12 @@ class UseMux2 extends Module {
   // ***** your code starts here *****
 
   // create a Mux2 component and connect it to a, b, sel, and res
+  val mux = Module(new Mux2())
 
-  // below is dummy code to make this example compile
-  res := b
+  mux.io.a := a
+  mux.io.b := b
+  mux.io.sel := sel
+  res := mux.io.y
 
   // ***** your code ends here *****
 

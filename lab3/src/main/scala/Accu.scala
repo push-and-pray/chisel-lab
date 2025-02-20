@@ -10,8 +10,15 @@ class Accu extends Module {
   val res = Wire(UInt())
 
   // ***** your code starts here *****
+  val count = RegInit(0.U(8.W))
 
-  res := 0.U // dummy code to make it compile
+  when(io.setZero) {
+    count := 0.U
+  }.otherwise {
+    count := count + io.din
+  }
+
+  res := count
 
   // ***** your code ends here *****
 

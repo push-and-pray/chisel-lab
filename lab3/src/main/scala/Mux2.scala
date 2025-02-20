@@ -1,8 +1,7 @@
 import chisel3._
 
-/**
-  * Mux2 is a simple one-bit multiplexer.
-  * Use it in UseMux2 and to build the Mux4 circuit.
+/** Mux2 is a simple one-bit multiplexer. Use it in UseMux2 and to build the
+  * Mux4 circuit.
   */
 
 class Mux2 extends Module {
@@ -14,7 +13,8 @@ class Mux2 extends Module {
   })
 
   io.y := io.a
-  when (io.sel === 1.U) {
+  when(io.sel === 1.U) {
     io.y := io.b
   }
+
 }

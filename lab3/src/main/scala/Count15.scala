@@ -9,7 +9,11 @@ class Count15 extends Module {
 
   // ***** your code starts here *****
 
-  res := 0.U // dummy code to make it compile
+  val count = RegInit(0.U(4.W))
+
+  count := Mux(count === 15.U, 0.U, count + 1.U)
+
+  res := count
 
   // ***** your code ends here *****
 
